@@ -9,16 +9,21 @@ interface Link {
 }
 
 const Footer = () => (
-	<footer className="flex h-12 bg-slate-900">
-		<ul>
+	<footer className="flex flex-col items-center justify-center bg-slate-900  mt-20">
+		<ul className="flex flex-wrap justify-around items-center w-full">
 			{footerData.map((link: Link, i: number) => (
-				<li key={i}>
-					<a href={link.url} target="_blank" rel="noopener noreferrer">
+				<li key={i} className="flex flex-col items-center">
+					<a
+						href={link.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="p-8"
+					>
 						<Image
-							src={`${link?.icon.toLowerCase()}.svg`}
+							src={`${link?.icon.toLowerCase()}`}
 							alt={link.name}
-							width={24}
-							height={24}
+							width={48}
+							height={48}
 						/>
 						{link.name}
 					</a>
