@@ -9,7 +9,7 @@ interface Link {
 }
 
 const Footer = () => (
-	<footer className="flex flex-col items-center justify-center bg-slate-900  mt-20">
+	<footer className="flex flex-col items-center justify-center bg-slate-900">
 		<ul className="flex flex-wrap justify-around items-center w-full">
 			{footerData.map((link: Link, i: number) => (
 				<li key={i} className="flex flex-col items-center">
